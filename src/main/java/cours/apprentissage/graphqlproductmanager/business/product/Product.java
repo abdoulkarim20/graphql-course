@@ -1,11 +1,12 @@
-package cours.apprentissage.graphqlproject.business.product;
+package cours.apprentissage.graphqlproductmanager.business.product;
 
-import cours.apprentissage.graphqlproject.business.category.Category;
-import jakarta.persistence.*;
+import cours.apprentissage.graphqlproductmanager.business.category.Categorie;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "products")
@@ -21,5 +22,5 @@ public class Product {
     private Double price;
     private Integer quantity;
     @ManyToOne
-    private Category category;
+    private Categorie categorie;
 }

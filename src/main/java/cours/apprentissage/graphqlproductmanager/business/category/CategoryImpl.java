@@ -1,4 +1,4 @@
-package cours.apprentissage.graphqlproject.business.category;
+package cours.apprentissage.graphqlproductmanager.business.category;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,19 +15,19 @@ public class CategoryImpl implements ICategory{
     }
 
     @Override
-    public Category save(Category category) {
-        return categoryRepository.save(category);
+    public Categorie save(Categorie categorie) {
+        return categoryRepository.save(categorie);
     }
 
     @Override
-    public Category update(Category category) {
-        return categoryRepository.save(category);
+    public Categorie update(Categorie categorie) {
+        return categoryRepository.save(categorie);
     }
 
     @Override
-    public Category findById(Long id) {
-        Category category=categoryRepository.findById(id).orElseThrow(()->new RuntimeException("Category not found"));
-        return null;
+    public Categorie findById(Long id) {
+        Categorie categorie =categoryRepository.findById(id).orElseThrow(()->new RuntimeException("Category not found"));
+        return categorie;
     }
 
     @Override
@@ -37,7 +37,7 @@ public class CategoryImpl implements ICategory{
     }
 
     @Override
-    public List<Category> categories() {
+    public List<Categorie> categories() {
         return categoryRepository.findAll();
     }
 }

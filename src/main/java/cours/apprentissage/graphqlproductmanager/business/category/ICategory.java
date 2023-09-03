@@ -1,11 +1,11 @@
-package cours.apprentissage.graphqlproject.business.category;
+package cours.apprentissage.graphqlproductmanager.business.category;
 
 import java.util.List;
 
 public interface ICategory {
-    Category save(Category category);
-    Category update(Category category);
-    Category findById(Long id);
+    Categorie save(Categorie categorie);
+    Categorie update(Categorie categorie);
+    Categorie findById(Long id);
     Boolean deleteById(Long id);
-    List<Category>categories();
+    List<Categorie>categories();
 }

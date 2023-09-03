@@ -1,0 +1,19 @@
+type Query{
+    productList:[Product],
+    getProductById(id:Float):Product,
+    categories:[Categorie],
+    getCategorieById(id:Float):Categorie,
+}
+
+type Product {
+    id:Float,
+    name:String,
+    price:Float,
+    quantity:Int,
+    categorie:Categorie
+}
+type Categorie{
+    id:Float,
+    name:String,
+    products:[Product]
+}

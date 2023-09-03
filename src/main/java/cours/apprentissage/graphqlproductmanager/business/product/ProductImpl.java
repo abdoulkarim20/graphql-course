@@ -1,4 +1,4 @@
-package cours.apprentissage.graphqlproject.business.product;
+package cours.apprentissage.graphqlproductmanager.business.product;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,7 +25,8 @@ public class ProductImpl implements IProduct{
 
     @Override
     public Product findById(Long id) {
-        return null;
+        Product product=productRepository.findById(id).orElseThrow(() ->new RuntimeException(String.format("Product not found ",id)));
+        return product;
     }
 
     @Override

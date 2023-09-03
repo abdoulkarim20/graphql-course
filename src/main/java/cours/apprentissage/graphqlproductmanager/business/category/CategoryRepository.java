@@ -1,8 +1,8 @@
-package cours.apprentissage.graphqlproject.business.category;
+package cours.apprentissage.graphqlproductmanager.business.category;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Category,Long> {
+public interface CategoryRepository extends JpaRepository<Categorie,Long> {
 }

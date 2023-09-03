@@ -1,4 +1,4 @@
-package cours.apprentissage.graphqlproject.business.product;
+package cours.apprentissage.graphqlproductmanager.business.product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

@@ -16,11 +16,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Category {
+public class Categorie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "category")
+    @OneToMany(mappedBy = "categorie")
     private List<Product> products = new ArrayList<>();
 }

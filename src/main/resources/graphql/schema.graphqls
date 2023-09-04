@@ -2,7 +2,12 @@ type Query{
     productList:[Product],
     getProductById(id:Float):Product,
     categories:[Categorie],
-    getCategorieById(id:Float):Categorie,
+    getCategorieById(id:Float):Categorie
+}
+type Mutation{
+    save(productRequestDTO:ProductRequestDTO):Product,
+    update(id:Float,productRequestDTO:ProductRequestDTO):Product,
+    deleteProduct(id:Float):Boolean
 }
 
 type Product {
@@ -16,4 +21,11 @@ type Categorie{
     id:Float,
     name:String,
     products:[Product]
+}
+
+input ProductRequestDTO{
+    name:String,
+    price:Float,
+    quantity:Int,
+    categorieId:Float
 }

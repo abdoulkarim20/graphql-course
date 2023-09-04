@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class CategoryImpl implements ICategory{
+public class CategoryImpl implements ICategory {
     private CategoryRepository categoryRepository;
 
     public CategoryImpl(CategoryRepository categoryRepository) {
@@ -26,7 +26,7 @@ public class CategoryImpl implements ICategory{
 
     @Override
     public Categorie findById(Long id) {
-        Categorie categorie =categoryRepository.findById(id).orElseThrow(()->new RuntimeException("Category not found"));
+        Categorie categorie = categoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Category not found"));
         return categorie;
     }
 
